@@ -1,10 +1,7 @@
 {
   "functions": {
-    "apps/api/api/index.ts": {
+    "api/index.ts": {
       "includeFiles": "../../packages/crypto/dist/**"
     }
-  },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/apps/api/api/index" }
-  ]
+  }
 }
