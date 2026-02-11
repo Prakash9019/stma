@@ -1,7 +1,14 @@
 {
-  "functions": {
-    "api/index.ts": {
-      "includeFiles": "../../packages/crypto/dist/**"
+  "builds": [
+    {
+      "src": "api/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": "../../packages/crypto/dist/**"
+      }
     }
-  }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.ts" }
+  ]
 }
