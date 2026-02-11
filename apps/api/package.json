@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/server.ts",
+    "dev": "ts-node api/index.ts",
     "build": "echo 'Building API...'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
