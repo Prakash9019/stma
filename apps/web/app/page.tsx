@@ -9,7 +9,7 @@ export default function Home() {
   // const API = process.env.NEXT_PUBLIC_API_URL!;
   const API = "http://localhost:3002";
   async function encrypt() {
-    const res = await fetch(`http://localhost:3002/tx/encrypt`, {
+    const res = await fetch(`https://secure-tx-api-7qg4.vercel.app/api/tx/encrypt`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -23,7 +23,7 @@ export default function Home() {
 
   async function decrypt() {
     const res = await fetch(
-      `http://localhost:3002/tx/${record.id}/decrypt`,
+      `https://secure-tx-api-7qg4.vercel.app/api/tx/${record.id}/decrypt`,
       { method: "POST" }
     );
 
