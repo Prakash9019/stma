@@ -6,10 +6,10 @@ export default function Home() {
   const [partyId, setPartyId] = useState("");
   const [payload, setPayload] = useState("{}");
   const [record, setRecord] = useState<any>(null);
-  const API = process.env.NEXT_PUBLIC_API_URL!;
-  
+  // const API = process.env.NEXT_PUBLIC_API_URL!;
+  const API = "http://localhost:3002";
   async function encrypt() {
-    const res = await fetch(`${API}/tx/encrypt`, {
+    const res = await fetch(`http://localhost:3002/tx/encrypt`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -23,7 +23,7 @@ export default function Home() {
 
   async function decrypt() {
     const res = await fetch(
-      `${API}/tx/${record.id}/decrypt`,
+      `http://localhost:3002/tx/${record.id}/decrypt`,
       { method: "POST" }
     );
 
