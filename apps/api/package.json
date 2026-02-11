@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/server.ts",
+    "build": "echo 'Building API...'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
