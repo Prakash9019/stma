@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/index.ts": {
+    "apps/api/src/server.ts": {
       "includeFiles": "../../packages/crypto/dist/**"
     }
   },
