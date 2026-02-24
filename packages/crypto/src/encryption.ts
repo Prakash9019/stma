@@ -87,7 +87,7 @@ export function decryptEnvelope(record: any) {
   assertHexSize(record.dek_wrap_tag, 16);
 
   const masterKey = Buffer.from(process.env.MASTER_KEY!, "hex");
-
+  // Unwrap the DEK
   const unwrapCipher = crypto.createDecipheriv(
     ALGO,
     masterKey,
@@ -100,7 +100,7 @@ export function decryptEnvelope(record: any) {
     unwrapCipher.update(Buffer.from(record.dek_wrapped, "hex")),
     unwrapCipher.final()
   ]);
-
+// Decrypt the Payload
   const payloadDecipher = crypto.createDecipheriv(
     ALGO,
     dek,
